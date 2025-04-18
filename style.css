@@ -1,0 +1,159 @@
+/* Reset đơn giản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tổng thể body */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #949deff8; /* màu nền head */
+  padding: 15px 30px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center; /* Căn dọc giữa */
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  display: flex;
+  align-items: center; /* Giúp các mục cùng hàng dọc */
+}
+
+/* Màu menu */
+.navbar a {
+  color: rgb(0, 0, 0); /* màu menu */
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #136bd0db;
+}
+
+.header-contact-button {
+  background-color: rgb(17, 75, 211); /* Nền trắng ngay từ đầu */
+  color: #000000; /* Chữ màu xanh */
+  padding: 8px 16px; /* Nút to rõ */
+  border-radius: 8px; /* Bo góc */
+  font-weight: bold;
+  border: none; /* Không viền */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+/* Hover cho nút Liên hệ */
+.header-contact-button:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+/* Dropdown menu cho "Khu vực" */
+.navbar li.dropdown {
+  position: relative;
+}
+
+/* Dropdown menu ẩn ban đầu */
+.dropdown-menu {
+  display: none; /* Ẩn hoàn toàn từ đầu */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 5px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+
+
+/* Mỗi mục trong dropdown */
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f2f2f2;
+}
+
+/* Hiện dropdown khi click vào "Khu vực" */
+.dropdown a {
+  cursor: pointer;
+}
+
+
+/* Đảm bảo menu không tràn ra ngoài trang */
+body {
+  position: relative; /* Đảm bảo có không gian cho các phần tử tuyệt đối */
+}
+
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+
+
+/* Main */
+main {
+  flex: 1;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+/* Footer */
+footer {
+  background-color: #949deff8;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto; /* Đảm bảo footer luôn nằm ở cuối */
+  width: 100%;
+}
+
